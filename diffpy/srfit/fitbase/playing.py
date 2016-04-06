@@ -7,9 +7,8 @@ from ase.io import vasp
 import numpy as np
 
 # Creates a VASP input from diffpy structure using ASE
-class Playing():
 
-    def vaspcalc(struct,relaxed_struct,energy)
+    def vaspcalc(struct,relaxed_struct,energy):
         ats = Atoms(struct.element, scaled_positions=struct.xyz,cell=struct.lattice.stdbase)
         write('POSCAR',ats,format='vasp')
         
