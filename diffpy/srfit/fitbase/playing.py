@@ -7,6 +7,7 @@ from ase.io import vasp
 import numpy as np
 
 # Creates a VASP input from diffpy structure using ASE
+class Playing():
 
     def vaspcalc(struct,relaxed_struct,energy)
         ats = Atoms(struct.element, scaled_positions=struct.xyz,cell=struct.lattice.stdbase)
@@ -17,3 +18,5 @@ import numpy as np
         vaspout=read('OUTCAR',format='vasp_out')
         relaxed_struct=Atoms(struct.element, scaled_positions=vaspout.get_scaled_positions(),cell=vaspout.get_cell())
         energy=vaspout.get_potential_energy()
+        
+        return
